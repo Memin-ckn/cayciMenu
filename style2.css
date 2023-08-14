@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.content {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  font-size: 1.6rem;
+  place-items: center;
+  background: linear-gradient(to right bottom, #eec962, #f0b617);
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Open Sans, Ubuntu, Fira Sans, Helvetica Neue, sans-serif;
+}
+
+.container {
+  width: 80vw;
+  padding: 1rem;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+  border-radius: 3rem;
+  background: linear-gradient(to right bottom,
+      rgb(255, 184, 142, 0.44),
+      rgba(255, 255, 255, 0.5));
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &::before {
+    content: "";
+    top: -10rem;
+    left: -10rem;
+    width: 40rem;
+    height: 40rem;
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.35);
+  }
+
+  &::after {
+    content: "";
+    bottom: 0rem;
+    right: -10rem;
+    width: 40rem;
+    height: 40rem;
+    margin-bottom: -25rem;
+    position: absolute;
+    border-radius: 50%;
+
+  }
+
+  h1 {
+    top: 0;
+    margin: 0;
+    padding: 6rem 0;
+    padding-top: 7rem;
+    position: sticky;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 3rem;
+    box-shadow: 0 7px 2rem #ea5753;
+    background: rgba(234, 87, 83, 0.7);
+  }
+
+
+  li {
+    width: 40rem;
+    text-align: center;
+    color: #fff;
+    border-radius: 3rem;
+    background: rgba(234, 87, 83, 0.7);
+    counter-increment: my-counter;
+    padding: 1.1rem 1.5rem 1.1rem 1.5rem;
+
+    &::before {
+      content: counter(my-counter) ". ";
+    }
+  }
+
+  ul {
+    margin: 0;
+    gap: 1rem;
+    padding: 0;
+    display: flex;
+    list-style-type: none;
+    place-items: center;
+    flex-direction: column;
+    counter-reset: my-counter;
+
+  }
+}
